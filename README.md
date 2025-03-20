@@ -12,7 +12,7 @@
 8. &emsp; **Preprocess** RGB frame: Resize to 640×640, normalize pixel values to [0, 1], convert to PyTorch tensor.  
 9. &emsp; **Run** YOLOv7 inference to detect objects. Let _detections_ = {(x₁, y₁, x₂, y₂, class, confidence)}.  
 10. &emsp; **Apply** Non-Maximum Suppression (NMS) to filter overlapping detections.  
-11. &emsp; **Divide** the image frame width into 8 equal grid columns: columnWidth = frameWidth / 8.  
+11. &emsp; **Calculate** the column widht by divide the image frame  width into 8 : columnWidth = frameWidth / 8.  
 12. &emsp; **For each** detection:  
 13. &emsp;&emsp; **If** (class == person **and** confidence ≥ τ₍conf₎):  
 14. &emsp;&emsp;&emsp; **Calculate** the bounding box center (Cₓ, Cᵧ) *(Cₓ = (x₁ + x₂)/2, Cᵧ = (y₁ + y₂)/2)*  
